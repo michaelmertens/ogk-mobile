@@ -8,9 +8,19 @@
 </ion-header>
 
 <ion-content text-center padding>
-
-  <p>{{currentAnswer}}</p>
-
   <button ion-button secondary center (click)="shakeBall()">Shake ball</button>
   
+  <div class="eight-ball-black">
+    <div class="eight-ball-white">
+      <div>{{currentAnswer}}</div>
+    </div>
+  </div>
+
+  <div class="action-row-bottom">
+      <p>Submit new responses:</p>
+      <div class="input-with-button">
+        <ion-input type="text" [(ngModel)]="newResponse" placeholder="New Response"></ion-input>
+        <button ion-button secondary class="button button-md button-default button-default-md" (click)="addNewResponse(newResponse)">Submit</button>
+      </div>
+  </div>
 </ion-content>

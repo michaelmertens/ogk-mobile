@@ -1,10 +1,10 @@
 import { News } from '../pages/news/news';
+import { Page2 } from '../pages/page2/page2';
 import { EightBall, SingYourSong } from '../games/games.module';
+import { ChineseVolunteer } from "../tools/chinese-volunteer/chinese-volunteer";
 import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar, Splashscreen } from 'ionic-native';
-
-import { Page2 } from '../pages/page2/page2';
 
 @Component({
   templateUrl: 'app.html'
@@ -15,18 +15,21 @@ export class MyApp {
   rootPage: any = News;
 
   pages: Array<{title: string, component: any}>;
+  tools: Array<{title: string, component: any}>;
   games: Array<{title: string, component: any}>;
 
   constructor(public platform: Platform) {
     this.initializeApp();
 
-    // used for an example of ngFor and navigation
     this.pages = [
       { title: 'News', component: News },
-      { title: 'Voting', component: Page2 }
+      { title: 'Test Page', component: Page2 }
     ];
 
-    // used for an example of ngFor and navigation
+    this.tools = [
+      { title: 'Chinese Vrijwilliger', component: ChineseVolunteer }
+    ]    
+
     this.games = [
       { title: 'Eight Ball', component: EightBall },
       { title: 'Sing your Song', component: SingYourSong }

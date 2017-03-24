@@ -4776,10 +4776,6 @@ textarea::-webkit-input-placeholder {
   padding-left: 2px;
 }
 
-textarea::-moz-placeholder {
-  padding-left: 2px;
-}
-
 textarea:-ms-input-placeholder {
   padding-left: 2px;
 }
@@ -32056,4 +32052,98 @@ ion-navbar.toolbar {
   .wp .modal-wrapper > .ion-page > ion-header > ion-content.statusbar-padding:first-child[padding-top] .scroll-content {
     padding-top: calc(16px + 20px);
   }
+}
+
+*::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
+*:-ms-input-placeholder {
+  /* IE 10+ */
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
+*::placeholder {
+  /* IE 10+ */
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.eight-ball-black {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 20rem;
+  height: 20rem;
+  background-color: black;
+  border-radius: 50%;
+  position: relative;
+}
+
+.eight-ball-white {
+  width: 10rem;
+  height: 10rem;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: calc(50% - 7rem);
+  right: calc(50% - 6rem);
+  color: black;
+  padding: 0 12px;
+}
+
+.eight-ball-white div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.action-row-bottom {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  background-color: rgba(255, 255, 255, 0.4);
+  text-align: left;
+  padding: 10px;
+}
+
+.action-row-bottom > p {
+  margin-top: 0;
+}
+
+.input-with-button {
+  width: 100%;
+  display: inline-block;
+  border-radius: 9px;
+}
+
+.input-with-button > ion-input {
+  background-color: rgba(255, 255, 255, 0.1);
+  display: inline-block;
+  width: 70%;
+}
+
+.input-with-button > button {
+  width: 25%;
+  margin-bottom: 12px;
+}
+
+ion-card, ion-card-header, ion-card-content {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+ion-list-header {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.bottom-space {
+  margin-bottom: 25px;
+}
+
+.item.item-md .checkbox-md {
+  margin: 9px 20px 9px 4px !important;
 }

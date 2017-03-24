@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Chinese Vrijwilliger</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="chinese-volunteer" text-center padding>
+  <div class="bottom-space">
+    <h2>{{chosenMember}}</h2>
+    <button ion-button secondary center (click)="go()">Pick volunteer</button>
+  </div>
+  <!-- List header with buttons on each side -->
+  <ion-list-header>
+    Participants
+  </ion-list-header>
+  <ion-list>
+    <ion-item *ngFor="let m of members">
+        <ion-label>{{m.member.firstName}}</ion-label>
+        <ion-checkbox color="" [(ngModel)]="m.active"></ion-checkbox>
+    </ion-item>
+  </ion-list>
+</ion-content>
