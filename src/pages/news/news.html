@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>News</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content text-center padding>
+  <ion-card *ngFor="let s of newsStories">
+      <ion-card-header>{{s.title}}</ion-card-header>
+      <ion-card-content>
+          {{s.content}}
+      </ion-card-content>
+  </ion-card>
+</ion-content>

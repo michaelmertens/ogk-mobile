@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Sing your Song!</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content text-center padding>
+
+    <button ion-button secondary center (click)="spinWheel()">Spin the wheel!</button>
+
+    <div margin-top *ngIf="currentSong">
+        <h2>{{currentSong.title}}</h2>
+        <h4>{{currentSong.artist}}</h4>
+
+        Brought by: 
+        <h4>{{currentMember.lastName}}</h4>
+    </div>
+
+</ion-content>
