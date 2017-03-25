@@ -38,5 +38,7 @@ jspm_packages
 # Optional REPL history
 .node_repl_history
 
-# ionic platforms
+# ionic artifacts
 platforms/
+resources/android/**/*.*
+resources/ios/**/*.*
